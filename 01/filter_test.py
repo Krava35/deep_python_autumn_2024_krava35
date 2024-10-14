@@ -7,7 +7,7 @@ class TestFilter(unittest.TestCase):
     current_path = os.getcwd()
 
     def test_1(self, path=current_path):
-        file = path + "/hw1/text1.txt"
+        file = path + "/01/text1.txt"
         search_words = []
         stop_words = []
         model = Filtratrion(file, search_words, stop_words)
@@ -15,7 +15,7 @@ class TestFilter(unittest.TestCase):
         self.assertEqual(answer, model.filter())
 
     def test_2(self, path=current_path):
-        file = path + "/hw1/text1.txt"
+        file = path + "/01/text1.txt"
         search_words = ["бычок", "доска"]
         stop_words = []
         model = Filtratrion(file, search_words, stop_words)
@@ -23,7 +23,7 @@ class TestFilter(unittest.TestCase):
         self.assertEqual(answer, model.filter())
 
     def test_3(self, path=current_path):
-        file = path + "/hw1/text1.txt"
+        file = path + "/01/text1.txt"
         search_words = ["бычок", "доска"]
         stop_words = ["Ох"]
         model = Filtratrion(file, search_words, stop_words)
@@ -31,7 +31,7 @@ class TestFilter(unittest.TestCase):
         self.assertEqual(answer, model.filter())
 
     def test_4(self, path=current_path):
-        file = path + "/hw1/text1.txt"
+        file = path + "/01/text1.txt"
         search_words = ["бычок", "доска"]
         stop_words = ["идет", "ох"]
         model = Filtratrion(file, search_words, stop_words)
@@ -39,7 +39,7 @@ class TestFilter(unittest.TestCase):
         self.assertEqual(answer, model.filter())
 
     def test_5(self, path=current_path):
-        file = path + "/hw1/text1.txt"
+        file = path + "/01/text1.txt"
         search_words = ["бычок", "идет"]
         stop_words = []
         model = Filtratrion(file, search_words, stop_words)
@@ -47,7 +47,7 @@ class TestFilter(unittest.TestCase):
         self.assertEqual(answer, model.filter())
 
     def test_6(self, path=current_path):
-        file = path + "/hw1/text2.txt"
+        file = path + "/01/text2.txt"
         search_words = ["love"]
         stop_words = []
         model = Filtratrion(file, search_words, stop_words)
@@ -59,7 +59,7 @@ class TestFilter(unittest.TestCase):
         self.assertEqual(answer, model.filter())
 
     def test_7(self, path=current_path):
-        file = path + "/hw1/text2.txt"
+        file = path + "/01/text2.txt"
         search_words = ["love"]
         stop_words = ["hey"]
         model = Filtratrion(file, search_words, stop_words)
@@ -68,7 +68,7 @@ class TestFilter(unittest.TestCase):
         self.assertEqual(answer, model.filter())
 
     def test_8(self, path=current_path):
-        file = path + "/hw1/text2.txt"
+        file = path + "/01/text2.txt"
         search_words = ["love", "ooh", "faith"]
         stop_words = ["hey", "oh"]
         model = Filtratrion(file, search_words, stop_words)
